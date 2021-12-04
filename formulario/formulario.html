@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+		<title>HOTEL EL INCREIBLE HULK</title>
+	</head>
+	<body>
+
+		<form method="get" action="https://httpbin.org/get">
+
+		<p><h1>Reserva en el hotel </h1></p>
+
+ 		<fieldset>
+ 		<legend>Información general</legend>
+ 		<p>
+			<label for="fecha_llegada">Fecha de llegada:</label>
+			<input type="date" name="f_llegada" id="fecha_llegada" required autofocus min="2000-03-01">
+		</p>
+
+		<p>
+			<label for="numero_noches">Número de noches</label>
+			<input type="number" name="n_noches" id="numero_noches" placeholder="¿Cuántas noches?" required min="1">
+		</p>
+ 		<p>
+			<label for="numero_adultos">Adultos:</label>
+ 			<select name="n_adultos" id="numero_adultos" placeholder="2 Adultos">
+ 				<option value="1">1 Adulto</option>
+				<option value="2" selected>2 Adultos</option>				 				
+ 				<option value="3">3 Adultos</option>
+ 				<option value="4">4 Adultos</option>
+			</select>
+		</p>
+		<p>Tipo habitación:			
+			<input type="radio" name="t_habitacion" id="Standar" value="Standar">
+			<label for="Standar">Standar</label>
+			
+			<input type="radio" name="t_habitacion" id="Business" value="Business">
+			<label for="Business">Business</label>
+			
+			<input type="radio" name="t_habitacion" id="Suite" value="Suite">
+			<label for="Suite">Suite</label>
+		</p>		
+		</fieldset>
+
+		<fieldset>
+ 		<legend>Información de contacto</legend>
+ 		<p>
+			<label for="user_name">Nombre:</label>
+			<input type="text" name="nombre" id="user_name" maxlength="32" placeholder="Nombre y Apellidos" required>
+		</p>
+ 		<p>
+			<label for="user_email">Email: </label>
+			<input type="email" name="email" id="user_mail" placeholder="ejemplo@servidor.com" required>
+		</p>
+ 		</fieldset>
+
+		<fieldset>
+ 		<legend>Protección de datos</legend>
+ 		<p>
+			<input type="checkbox" id="privacidad" name="lopd" value="lopd" required>
+			<label for="privacidad">He leído y acepto la politica de privacidad</label>  			
+		</p>
+ 		<p>
+			<input type="checkbox" id="comuni_publi" name="publicidad" value="publicidad" >
+			<label for="comuni_publi">Acepto recibir comunicaciones comerciales</label> 	
+		</p> 		
+		</fieldset>
+		
+		<button type="submit">Envía reserva</button>
+		</form>
+	</body>
+</html>
